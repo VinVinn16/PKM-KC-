@@ -31,4 +31,59 @@ Tongkat konvensional hanya mendeteksi rintangan setelah terjadi kontak fisik. Di
 
 ---
 
-## Arsitektur Sistem
+## Komponen Hardware
+- ESP32 Dev Board
+- Sensor Ultrasonik (HC-SR04)
+- Sensor Infrared Obstacle
+- Motor Getar (via transistor)
+- Buzzer (opsional)
+- Baterai Li-ion + modul charger
+- Tongkat aluminium (housing prototipe)
+
+---
+
+## Software & Teknologi
+- **Bahasa**: MicroPython
+- **IDE**: Thonny / uPyCraft
+- **Algoritma**:
+  - Sliding window + median filter
+  - Adaptive threshold berbasis perubahan jarak
+  - Rule-based sensor fusion
+- **IoT (opsional)**: HTTP/MQTT (ThingSpeak/Firebase)
+
+---
+
+## Struktur Repository
+PKM-KC/
+├─ main.py # Program utama ESP32 (MicroPython)
+├─ config.py # Konfigurasi pin & parameter
+├─ README.md # Dokumentasi proyek
+
+
+## Cara Menjalankan
+1. Flash firmware **MicroPython** ke ESP32
+2. Upload `config.py` dan `main.py`
+3. Sambungkan rangkaian sesuai pin
+4. Nyalakan perangkat (powerbank/baterai)
+5. Uji dengan objek di berbagai jarak
+
+---
+
+## Keunggulan
+- Desain **realistis & ergonomis**
+- **Low-cost**, komponen mudah didapat
+- Modular & mudah dikembangkan
+- Relevan dengan kondisi lokal Indonesia
+
+---
+
+## Pengembangan Lanjutan
+- Navigasi berbasis graf (indoor)
+- Deteksi zebra cross / traffic light
+- AI ringan (klasifikasi rintangan)
+- Aplikasi pendamping (Android)
+
+---
+
+## Lisensi
+Proyek ini dikembangkan untuk keperluan akademik dan penelitian.
